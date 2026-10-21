@@ -1,0 +1,98 @@
+@use '../abstracts/mixins' as *;
+
+$word-gradient: linear-gradient(to bottom, rgba(201, 163, 92, 0.6), rgba(201, 163, 92, 0.03));
+
+.footer {
+  position: relative;
+  background: var(--ink-950);
+  border-top: 1px solid $line;
+  padding: clamp(80px, 9vw, 120px) var(--pad) 32px;
+  overflow: hidden;
+
+  &__inner {
+    max-width: var(--maxw);
+    margin-inline: auto;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__brand {
+    display: grid;
+    gap: 26px;
+    justify-items: start;
+    max-width: 380px;
+
+    p { color: var(--muted); }
+  }
+
+  &__cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(40px, 6vw, 90px);
+  }
+
+  &__col {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+
+    .label { margin-bottom: 8px; }
+
+    a,
+    p {
+      color: var(--sand);
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    a:hover { color: var(--gold); }
+  }
+
+  &__word {
+    font-family: var(--f-display);
+    font-weight: 300;
+    text-align: center;
+    font-size: clamp(4.5rem, 20.5vw, 20rem);
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: clamp(60px, 7vw, 100px) 0 clamp(30px, 4vw, 50px);
+    background: $word-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    user-select: none;
+
+    // Transformed split letters escape the parent's text clip, so each letter carries the gradient.
+    .fw-char {
+      background: $word-gradient;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding-bottom: 0.06em;
+    }
+
+    @include below(sm) { margin-top: 50px; }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 0.84rem;
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    a:hover { color: var(--pearl); }
+  }
+}

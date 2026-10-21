@@ -1,0 +1,50 @@
+@use 'sass:map';
+
+// Breakpoints (max-width, desktop-first like the original layout)
+$breakpoints: (
+  sm: 767px,
+  md: 860px,
+  lg: 1080px,
+);
+
+@mixin below($bp) {
+  @media (max-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media (hover: none), (pointer: coarse) {
+    @content;
+  }
+}
+
+// Hairlines used for dividers across the site
+$line: rgba(140, 107, 50, 0.4);
+$line-soft: rgba(140, 107, 50, 0.25);
+$gold-line: rgba(201, 163, 92, 0.3);
+
+@mixin label($size: 0.78rem, $tracking: 0.26em) {
+  font-family: var(--f-label);
+  font-size: $size;
+  letter-spacing: $tracking;
+  text-transform: uppercase;
+}
+
+// Tall arch mask: the curve keeps its proportion whatever the element height.
+@mixin arch-mask {
+  -webkit-mask: var(--arch-mask) top / 100% auto no-repeat;
+  mask: var(--arch-mask) top / 100% auto no-repeat;
+}
+
+@mixin cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin glass($alpha: 0.82, $blur: 14px) {
+  background: rgba(11, 7, 6, $alpha);
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+}

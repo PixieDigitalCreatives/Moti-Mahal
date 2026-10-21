@@ -1,0 +1,40 @@
+@use 'mixins' as *;
+
+// Design tokens mirror the Figma file "Moti Mahal — Premium Website Redesign".
+:root {
+  --ink-950: #0b0706;
+  --ink-900: #140c09;
+  --ink-800: #1e130f;
+  --ink-700: #2a1812;
+  --maroon: #4a1a16;
+  --oxblood: #6e2620;
+  --gold: #c9a35c;
+  --gold-hi: #e6cc8f;
+  --gold-lo: #8c6b32;
+  --pearl: #f6f0e6;
+  --sand: #e4d8c4;
+  --muted: #a8977c;
+  --saffron: #d9792b;
+  --emerald: #1f4d40;
+  --veg: #2e8b3e;
+  --nonveg: #b3261e;
+
+  --f-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --f-label: 'Marcellus', 'Cormorant Garamond', serif;
+  --f-body: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --pad: clamp(20px, 4.5vw, 64px);
+  --maxw: 1440px;
+  --section-y: clamp(110px, 14vw, 200px);
+  --radius: 6px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --nav-h: 96px;
+
+  --arch-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cpath d='M0 1000V50C0 19 30 14 50 0c20 14 50 19 50 50v950z'/%3E%3C/svg%3E");
+  --arch-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cpath d='M.5 1000V50.5C.5 19.6 30.3 14.6 50 .6c19.7 14 49.5 19 49.5 49.9V1000' fill='none' stroke='%23c9a35c' stroke-opacity='.6' stroke-width='.35'/%3E%3C/svg%3E");
+
+  @include below(sm) {
+    --nav-h: 80px;
+  }
+}

@@ -1,0 +1,101 @@
+@use '../abstracts/mixins' as *;
+
+.label {
+  @include label;
+  color: var(--gold);
+  line-height: 1.4;
+}
+
+.kicker {
+  @include label(0.8rem, 0.3em);
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--gold-hi);
+
+  @include below(sm) {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    gap: 12px;
+
+    .orn::before,
+    .orn::after { width: 18px; }
+  }
+}
+
+.orn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 38px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  i {
+    width: 7px;
+    height: 7px;
+    background: currentColor;
+    transform: rotate(45deg);
+  }
+}
+
+.display {
+  font-family: var(--f-display);
+  font-weight: 300;
+  line-height: 0.94;
+  letter-spacing: -0.015em;
+  color: var(--pearl);
+}
+
+.display,
+.h2,
+.h3 {
+  em {
+    font-style: italic;
+    color: var(--gold-hi);
+    font-weight: 300;
+  }
+}
+
+.h2 {
+  font-family: var(--f-display);
+  font-weight: 300;
+  font-size: clamp(2.9rem, 6.6vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+}
+
+.h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  line-height: 1.65;
+  color: var(--sand);
+}
+
+.muted { color: var(--muted); }
+
+.price {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+// SplitText line masks
+.split-line {
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}

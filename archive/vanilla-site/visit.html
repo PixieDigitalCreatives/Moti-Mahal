@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head.html -->
+    <title>Visit &amp; Reserve — Moti Mahal Jaypee Greens, Greater Noida</title>
+    <meta name="description" content="Reserve a table at Moti Mahal, FF-16 & 17, Sun Twilight, Sector 27, Jaypee Greens, Greater Noida. Open daily 11 AM – 11 PM. Call 087962 77703." />
+    <meta property="og:title" content="Visit & Reserve — Moti Mahal, Jaypee Greens" />
+  </head>
+  <body data-page="visit">
+    <!-- @include nav.html -->
+    <main id="main">
+      <section class="page-hero" style="min-height: 78svh">
+        <div class="page-hero__media" data-page-hero-media><img src="/images/warm-interior.webp" alt="Warm dining room with set tables" fetchpriority="high" /></div>
+        <div class="page-hero__inner">
+          <p class="label breadcrumb" data-hero-item><a href="/">Home</a><span aria-hidden="true">/</span><span>Visit &amp; Reserve</span></p>
+          <h1 class="display page-hero__title" data-hero-title>Your table<br /><em>awaits</em></h1>
+          <div class="page-hero__row" data-hero-item>
+            <p class="lead">On the first floor of Sun Twilight, a short walk from Delta 1 metro. We confirm every reservation personally.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container visit" id="reserve">
+        <div>
+          <h2 class="h2" style="margin-bottom: 44px" data-split>Find<br /><em>the Mahal</em></h2>
+          <dl class="info-list" data-stagger>
+            <div class="info">
+              <dt class="label">Address</dt>
+              <dd class="info__value">
+                <strong>Sun Twilight, Jaypee Greens</strong>
+                <span>Shop No. FF-16 &amp; 17, 1st Floor, Metro Street, Sector 27, Greater Noida, Uttar Pradesh 201310</span>
+                <a class="btn btn--link" href="https://www.google.com/maps/search/?api=1&amp;query=Moti+Mahal+Sun+Twilight+Jaypee+Greens+Greater+Noida" target="_blank" rel="noopener">
+                  <span class="btn__label"><span>Get directions</span></span>
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </dd>
+            </div>
+            <div class="info">
+              <dt class="label">Phone</dt>
+              <dd class="info__value"><strong><a href="tel:+918796277703">087962 77703</a></strong><span>Reservations, takeaway &amp; delivery</span></dd>
+            </div>
+            <div class="info">
+              <dt class="label">Hours</dt>
+              <dd class="info__value"><strong>11 AM – 11 PM</strong><span>Open every day, lunch &amp; dinner</span></dd>
+            </div>
+            <div class="info">
+              <dt class="label">Getting here</dt>
+              <dd class="info__value"><strong>Near Delta 1 Metro</strong><span>Aqua Line · a short walk to Sun Twilight</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="form-card" data-form-card data-fade>
+          <form novalidate>
+            <div class="form-card__head">
+              <p class="label">Reservation</p>
+              <h3 class="h3">Reserve a table</h3>
+              <p class="muted">Send us your request and we will confirm within minutes.</p>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Full name" required />
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98xxxxxxxx" required />
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-date">Date</label>
+                <input id="f-date" name="date" type="date" required />
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-time">Time</label>
+                <select id="f-time" name="time"></select>
+              </div>
+              <div class="field">
+                <label for="f-guests">Guests</label>
+                <select id="f-guests" name="guests" required>
+                  <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option>
+                  <option value="5">5</option><option value="6">6</option><option value="8">7 – 8</option><option value="10">9 – 12</option><option value="12+">12+ (large group)</option>
+                </select>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-occasion">Occasion</label>
+                <select id="f-occasion" name="occasion">
+                  <option>None</option><option>Birthday</option><option>Anniversary</option><option>Family gathering</option><option>Business meal</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="f-notes">Special requests</label>
+                <textarea id="f-notes" name="notes" rows="3" placeholder="High chair, allergies, a quiet corner…"></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--gold" type="submit" data-magnetic>
+                <span class="btn__label"><span>Request reservation</span></span>
+                <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+              </button>
+              <small>Or call <a href="tel:+918796277703" style="color: var(--gold)">087962 77703</a></small>
+            </div>
+          </form>
+          <div class="form-success" role="status">
+            <svg width="34" height="34" style="color: var(--gold)" aria-hidden="true"><use href="#i-star" /></svg>
+            <h3 class="h3">Almost there</h3>
+            <p class="muted" data-summary></p>
+            <p class="muted" style="max-width: 38ch">We opened WhatsApp with your request ready to send. Tap send and our team will confirm shortly.</p>
+            <a class="btn btn--gold" href="#" target="_blank" rel="noopener" data-wa-link>
+              <span class="btn__label"><span>Open WhatsApp again</span></span>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+            <button class="btn btn--link" type="button" data-form-reset><span class="btn__label"><span>Make another request</span></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" style="padding-bottom: var(--section-y)">
+        <div class="map-wrap" data-fade>
+          <iframe title="Map showing Moti Mahal at Sun Twilight, Jaypee Greens" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sun+Twilight+Jaypee+Greens+Sector+27+Greater+Noida&amp;output=embed"></iframe>
+          <div class="map-card">
+            <p class="label">Moti Mahal</p>
+            <p>FF-16 &amp; 17, Sun Twilight, Sector 27, Jaypee Greens</p>
+            <a class="btn btn--link" href="https://www.google.com/maps/search/?api=1&amp;query=Moti+Mahal+Sun+Twilight+Jaypee+Greens+Greater+Noida" target="_blank" rel="noopener">
+              <span class="btn__label"><span>Open in Maps</span></span>
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-900">
+        <div class="container">
+          <div class="sec-head sec-head--center"><h2 class="h2" data-split>Good<br /><em>to know</em></h2></div>
+          <div class="faq" data-faq>
+            <div class="faq__item">
+              <button class="faq__q" type="button" aria-expanded="false">Do I need to reserve in advance?<i aria-hidden="true"></i></button>
+              <div class="faq__a"><p>Walk-ins are always welcome. For weekend evenings, festivals and groups we recommend reserving a few hours ahead so we can hold the right table for you.</p></div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__q" type="button" aria-expanded="false">Can you host birthdays and family gatherings?<i aria-hidden="true"></i></button>
+              <div class="faq__a"><p>Yes. Tell us the occasion and number of guests when you reserve and our team will help with seating and a menu that suits the group.</p></div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__q" type="button" aria-expanded="false">Do you offer takeaway and delivery?<i aria-hidden="true"></i></button>
+              <div class="faq__a"><p>We do. Call 087962 77703 to place an order — everything is packed hot, straight from the kitchen.</p></div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__q" type="button" aria-expanded="false">Are there vegetarian options?<i aria-hidden="true"></i></button>
+              <div class="faq__a"><p>Plenty — from paneer tikka and dal makhani to fresh tandoori breads. Every dish on our menu is marked veg or non-veg.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer.html -->
+    <!-- @include overlays.html -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

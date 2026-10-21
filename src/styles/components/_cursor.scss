@@ -1,0 +1,56 @@
+@use '../abstracts/mixins' as *;
+
+.cursor,
+.cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  pointer-events: none;
+  border-radius: 50%;
+
+  html.is-preloading & { opacity: 0; }
+
+  @include touch { display: none; }
+}
+
+.cursor {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--gold);
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 1px solid rgba(201, 163, 92, 0.55);
+  display: grid;
+  place-items: center;
+  transition: width 0.5s var(--ease), height 0.5s var(--ease), margin 0.5s var(--ease), background-color 0.5s var(--ease), border-color 0.5s;
+
+  &__label {
+    @include label(0.66rem, 0.2em);
+    color: var(--ink-950);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &.is-hover {
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border-color: var(--gold);
+  }
+
+  &.is-label {
+    width: 92px;
+    height: 92px;
+    margin: -46px 0 0 -46px;
+    background: var(--gold);
+    border-color: var(--gold);
+
+    .cursor-ring__label { opacity: 1; }
+  }
+}

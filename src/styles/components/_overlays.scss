@@ -1,0 +1,146 @@
+@use '../abstracts/mixins' as *;
+
+// ---------- Preloader: the Mahal gate ----------
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: var(--ink-950);
+  }
+
+  &__zoom {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+  }
+
+  &__ui {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    padding: 120px var(--pad) 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 10px 20px;
+    background: linear-gradient(to top, rgba(11, 7, 6, 0.9), rgba(11, 7, 6, 0));
+  }
+
+  &__brand {
+    display: grid;
+    gap: 8px;
+
+    span:first-child { @include label(0.95rem, 0.5em); }
+
+    span:last-child {
+      @include label(0.68rem, 0.3em);
+      color: var(--muted);
+    }
+
+    @include below(sm) {
+      span:first-child { font-size: 0.82rem; letter-spacing: 0.38em; }
+      span:last-child { font-size: 0.6rem; letter-spacing: 0.2em; }
+    }
+  }
+
+  &__count {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 0.8;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  &__bar {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: rgba(246, 240, 230, 0.14);
+    margin-top: 14px;
+
+    i {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: var(--gold);
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+  }
+
+  &__skip {
+    @include label(0.68rem, 0.26em);
+    position: absolute;
+    top: 24px;
+    right: var(--pad);
+    z-index: 3;
+    color: var(--muted);
+    padding: 10px 4px;
+    transition: color 0.3s;
+
+    &:hover { color: var(--gold); }
+  }
+}
+
+.gate-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gate-lines path:not(.gate-pearls) {
+  vector-effect: non-scaling-stroke;
+}
+
+// ---------- Page curtain between routes ----------
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  pointer-events: none;
+  transform: translateY(115%);
+
+  &__panel {
+    position: absolute;
+    inset: 0;
+    background: var(--ink-900);
+  }
+
+  &__arch {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 22vh;
+    color: var(--ink-900);
+
+    path { fill: currentColor; }
+  }
+
+  &__title {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    color: var(--gold-hi);
+
+    small {
+      @include label(0.7rem, 0.4em);
+      display: block;
+      font-style: normal;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+  }
+}

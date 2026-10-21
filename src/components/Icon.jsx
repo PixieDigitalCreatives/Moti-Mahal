@@ -1,0 +1,29 @@
+/** Inline SVG sprite: symbols are defined once in <Sprite /> and referenced by name. */
+export function Sprite() {
+  return (
+    <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true" focusable="false">
+      <symbol id="i-arrow" viewBox="0 0 16 12">
+        <path d="M1 6h14M10 1l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 16 12">
+        <path d="M15 6H1M6 1L1 6l5 5" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 28 28">
+        <path d="M14 0c1.2 9.6 4.4 12.8 14 14-9.6 1.2-12.8 4.4-14 14-1.2-9.6-4.4-12.8-14-14C9.6 12.8 12.8 9.6 14 0z" fill="currentColor" />
+      </symbol>
+      <symbol id="i-mark" viewBox="0 0 28 36">
+        <path d="M1 35V17.1C1 7.1 8.8 5.5 14 1c5.2 4.5 13 6.1 13 16.1V35" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M6 35V20.9c0-6.1 4.8-7.1 8-9.9 3.2 2.8 8 3.8 8 9.9V35" fill="none" stroke="currentColor" strokeOpacity=".5" />
+        <circle cx="14" cy="25" r="3" fill="#f6f0e6" />
+      </symbol>
+    </svg>
+  );
+}
+
+export function Icon({ name, ...props }) {
+  return (
+    <svg aria-hidden="true" {...props}>
+      <use href={`#i-${name}`} />
+    </svg>
+  );
+}
