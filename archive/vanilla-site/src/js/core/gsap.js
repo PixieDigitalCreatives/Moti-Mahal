@@ -8,8 +8,8 @@ import { CustomEase } from 'gsap/CustomEase';
 gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin, Flip, CustomEase);
 
 // Same curve as the CSS --ease token so CSS and GSAP motion feel identical.
-CustomEase.create('mahal', '0.16, 1, 0.3, 1');
-gsap.defaults({ ease: 'mahal', duration: 1.2 });
+CustomEase.create('restro', '0.16, 1, 0.3, 1');
+gsap.defaults({ ease: 'restro', duration: 1.2 });
 ScrollTrigger.config({ ignoreMobileResize: true });
 
 export const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

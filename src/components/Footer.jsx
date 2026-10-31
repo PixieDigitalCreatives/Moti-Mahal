@@ -35,9 +35,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer__word" aria-hidden="true" data-footer-word>Moti Mahal</div>
+        <div className="footer__word" aria-hidden="true" data-footer-word>Moti Restro</div>
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} Moti Mahal · Jaypee Greens, Greater Noida</span>
+          <span>© {new Date().getFullYear()} Moti Restro · Jaypee Greens, Greater Noida</span>
           <nav aria-label="Footer">
             {NAV_LINKS.map((l) => (
               <a key={l.to} href={l.to}>{l.to === '/visit' ? 'Visit & Reserve' : l.label}</a>

@@ -34,8 +34,8 @@ export default function Visit() {
 
   return (
     <div ref={page}>
-      <title>Visit &amp; Reserve — Moti Mahal Jaypee Greens, Greater Noida</title>
-      <meta name="description" content="Reserve a table at Moti Mahal, FF-16 & 17, Sun Twilight, Sector 27, Jaypee Greens, Greater Noida. Open daily 11 AM – 11 PM. Call 087962 77703." />
+      <title>Visit &amp; Reserve — Moti Restro Jaypee Greens, Greater Noida</title>
+      <meta name="description" content="Reserve a table at Moti Restro, FF-16 & 17, Sun Twilight, Sector 27, Jaypee Greens, Greater Noida. Open daily 11 AM – 11 PM. Call 087962 77703." />
       <main id="main">
         <PageHero image="/images/warm-interior.webp" alt="Warm dining room with set tables" crumb="Visit & Reserve" title={<>Your table<br /><em>awaits</em></>} minHeight="78svh">
           <p className="lead">On the first floor of Sun Twilight, a short walk from Delta 1 metro. We confirm every reservation personally.</p>
@@ -43,7 +43,7 @@ export default function Visit() {
 
         <section className="section container visit" id="reserve">
           <div>
-            <h2 className="h2" style={{ marginBottom: 44 }} data-split>Find<br /><em>the Mahal</em></h2>
+            <h2 className="h2" style={{ marginBottom: 44 }} data-split>Find<br /><em>Moti Restro</em></h2>
             <dl className="info-list" data-stagger>
               <div className="info">
                 <dt className="label">Address</dt>
@@ -72,9 +72,9 @@ export default function Visit() {
 
         <section className="container" style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="map-wrap" data-fade>
-            <iframe title="Map showing Moti Mahal at Sun Twilight, Jaypee Greens" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sun+Twilight+Jaypee+Greens+Sector+27+Greater+Noida&output=embed" />
+            <iframe title="Map showing Moti Restro at Sun Twilight, Jaypee Greens" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sun+Twilight+Jaypee+Greens+Sector+27+Greater+Noida&output=embed" />
             <div className="map-card">
-              <p className="label">Moti Mahal</p>
+              <p className="label">Moti Restro</p>
               <p>FF-16 &amp; 17, Sun Twilight, Sector 27, Jaypee Greens</p>
               <Button href={MAPS_URL} variant="link" target="_blank" rel="noopener noreferrer">Open in Maps</Button>
             </div>
@@ -101,7 +101,7 @@ function FaqItem({ q, a }) {
   const first = useRef(true);
   useLayoutEffect(() => {
     if (first.current) { first.current = false; return; }
-    gsap.to(body.current, { height: open ? 'auto' : 0, duration: 0.7, ease: 'mahal', onComplete: () => ScrollTrigger.refresh() });
+    gsap.to(body.current, { height: open ? 'auto' : 0, duration: 0.7, ease: 'restro', onComplete: () => ScrollTrigger.refresh() });
   }, [open]);
   return (
     <div className="faq__item">
@@ -148,7 +148,7 @@ function ReservationForm() {
     }
     const pretty = new Date(`${values.date}T00:00`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
     const msg = [
-      'Hello Moti Mahal, I would like to reserve a table.',
+      'Hello Moti Restro, I would like to reserve a table.',
       `Name: ${values.name}`, `Phone: ${values.phone}`, `Date: ${pretty}`, `Time: ${values.time}`, `Guests: ${values.guests}`,
       values.occasion !== 'None' ? `Occasion: ${values.occasion}` : '',
       values.notes ? `Requests: ${values.notes}` : '',

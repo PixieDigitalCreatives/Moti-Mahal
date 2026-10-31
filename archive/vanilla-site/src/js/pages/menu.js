@@ -78,7 +78,7 @@ function syncToggle(animate = true) {
     b.setAttribute('aria-pressed', String(on));
     if (on) active = b;
   });
-  if (active) gsap.to(thumb, { x: active.offsetLeft - 4, width: active.offsetWidth, duration: animate ? 0.6 : 0, ease: 'mahal' });
+  if (active) gsap.to(thumb, { x: active.offsetLeft - 4, width: active.offsetWidth, duration: animate ? 0.6 : 0, ease: 'restro' });
 }
 
 function initToggle() {
@@ -106,7 +106,7 @@ function setView(next) {
       if (next === 'book') ensureBook(); else ensureList();
       ScrollTrigger.refresh();
       scrollToEl(next === 'book' ? to.querySelector('[data-book-host]') : to, true, next === 'book' ? -170 : -100);
-      gsap.fromTo(to, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'mahal', clearProps: 'transform' });
+      gsap.fromTo(to, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'restro', clearProps: 'transform' });
     },
   });
 }
@@ -141,7 +141,7 @@ function activate(id) {
   const list = document.querySelector('[data-menu-nav]');
   if (!link || link.classList.contains('is-active')) return;
   links.forEach((l) => l.classList.toggle('is-active', l === link));
-  gsap.to(pill, { x: link.offsetLeft, y: link.offsetTop, width: link.offsetWidth, height: link.offsetHeight, duration: 0.6, ease: 'mahal' });
+  gsap.to(pill, { x: link.offsetLeft, y: link.offsetTop, width: link.offsetWidth, height: link.offsetHeight, duration: 0.6, ease: 'restro' });
   list.scrollTo({ left: link.offsetLeft - 40, behavior: 'smooth' });
 }
 

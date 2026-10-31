@@ -65,7 +65,7 @@ export default function Gallery() {
   useLayoutEffect(() => {
     if (!flipState.current) return;
     Flip.from(flipState.current, {
-      duration: 0.9, ease: 'mahal', absolute: true, scale: true,
+      duration: 0.9, ease: 'restro', absolute: true, scale: true,
       onEnter: (els) => gsap.fromTo(els, { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 1, scale: 1, duration: 0.7 }),
       onLeave: (els) => gsap.to(els, { autoAlpha: 0, scale: 0.85, duration: 0.5 }),
       onComplete: () => ScrollTrigger.refresh(),
@@ -75,10 +75,10 @@ export default function Gallery() {
 
   return (
     <div ref={page}>
-      <title>Gallery — Moti Mahal Jaypee Greens</title>
-      <meta name="description" content="Food, fire and evenings at Moti Mahal, Jaypee Greens — a gallery of tandoori classics, curries and our dining room." />
+      <title>Gallery — Moti Restro Jaypee Greens</title>
+      <meta name="description" content="Food, fire and evenings at Moti Restro, Jaypee Greens — a gallery of tandoori classics, curries and our dining room." />
       <main id="main">
-        <PageHero image="/images/thali-spread.webp" alt="A thali spread of curries, breads and rice on black stone" crumb="Gallery" title={<>Moments<br /><em>from the Mahal</em></>} minHeight="78svh" />
+        <PageHero image="/images/thali-spread.webp" alt="A thali spread of curries, breads and rice on black stone" crumb="Gallery" title={<>Moments<br /><em>from Moti Restro</em></>} minHeight="78svh" />
 
         <section className="section container" style={{ paddingTop: 'clamp(60px, 7vw, 100px)' }}>
           <div className="filters" role="group" aria-label="Filter photos">

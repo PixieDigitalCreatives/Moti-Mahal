@@ -1,9 +1,9 @@
 {
-  "name": "moti-mahal-jaypee-greens",
+  "name": "moti-restro-jaypee-greens",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Premium multi-page website for Moti Mahal, Jaypee Greens — Greater Noida",
+  "description": "Premium multi-page website for Moti Restro, Jaypee Greens — Greater Noida",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

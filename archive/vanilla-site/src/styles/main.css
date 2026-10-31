@@ -1,6 +1,6 @@
 /* =========================================================
-   Moti Mahal — Jaypee Greens
-   Design tokens mirror the Figma file "Moti Mahal — Premium Website Redesign"
+   Moti Restro — Jaypee Greens
+   Design tokens mirror the Figma file "Moti Restro — Premium Website Redesign"
    ========================================================= */
 
 :root {
@@ -312,7 +312,7 @@ body::after {
 html.is-preloading .cursor, html.is-preloading .cursor-ring { opacity: 0; }
 @media (hover: none), (pointer: coarse) { .cursor, .cursor-ring { display: none; } }
 
-/* ---------- Preloader (Mahal gate) ---------- */
+/* ---------- Preloader (gate) ---------- */
 .preloader { position: fixed; inset: 0; z-index: 1000; display: none; overflow: hidden; }
 html.is-preloading .preloader { display: block; }
 html.is-preloading body { overflow: hidden; }

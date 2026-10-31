@@ -26,7 +26,7 @@ function filters() {
     const state = Flip.getState(items);
     items.forEach((it) => it.classList.toggle('is-out', f !== 'all' && !it.dataset.tags.split(' ').includes(f)));
     Flip.from(state, {
-      duration: 0.9, ease: 'mahal', absolute: true, scale: true,
+      duration: 0.9, ease: 'restro', absolute: true, scale: true,
       onEnter: (els) => gsap.fromTo(els, { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 1, scale: 1, duration: 0.7 }),
       onLeave: (els) => gsap.to(els, { autoAlpha: 0, scale: 0.85, duration: 0.5 }),
       onComplete: () => ScrollTrigger.refresh(),

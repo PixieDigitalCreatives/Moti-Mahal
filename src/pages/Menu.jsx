@@ -52,7 +52,7 @@ export default function Menu() {
     ScrollTrigger.refresh();
     const el = panelEl(view);
     scrollToEl(view === 'book' ? el.querySelector('[data-book-host]') : el, true, view === 'book' ? -170 : -100);
-    gsap.fromTo(el, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'mahal', clearProps: 'transform' });
+    gsap.fromTo(el, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.8, ease: 'restro', clearProps: 'transform' });
   }, [view]);
 
   const goToCategory = (id) => {
@@ -67,8 +67,8 @@ export default function Menu() {
 
   return (
     <div ref={page}>
-      <title>Menu — Moti Mahal Jaypee Greens | Tandoori, Curries, Biryani</title>
-      <meta name="description" content="The Moti Mahal menu: tandoori chicken, butter chicken, dal makhani, mutton rogan josh, dum biryani, breads and desserts. Jaypee Greens, Greater Noida." />
+      <title>Menu — Moti Restro Jaypee Greens | Tandoori, Curries, Biryani</title>
+      <meta name="description" content="The Moti Restro menu: tandoori chicken, butter chicken, dal makhani, mutton rogan josh, dum biryani, breads and desserts. Jaypee Greens, Greater Noida." />
       <main id="main">
         <PageHero image="/images/spices.webp" alt="Whole and ground spices on a dark table" crumb="Menu" title={<>The <em>Menu</em></>} minHeight="72svh">
           <p className="lead">Recipes guarded for generations — fired in clay, finished with butter, and served the way they were meant to be.</p>

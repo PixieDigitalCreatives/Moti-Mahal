@@ -25,7 +25,7 @@ const coverPage = () => `
       <span class="cover__corner cover__corner--bl"></span><span class="cover__corner cover__corner--br"></span>
       <div class="cover__content">
         <svg class="cover__mark" aria-hidden="true"><use href="#i-mark" /></svg>
-        <p class="cover__brand foil">Moti Mahal</p>
+        <p class="cover__brand foil">Moti Restro</p>
         <span class="cover__rule" aria-hidden="true"><i></i></span>
         <h2 class="cover__title foil">The Menu</h2>
         <p class="cover__sub">Jaypee Greens · Greater Noida</p>
@@ -40,7 +40,7 @@ const insideCoverPage = () => `
       <div class="endpaper__card">
         <svg class="endpaper__star" aria-hidden="true"><use href="#i-star" /></svg>
         <p class="endpaper__kicker">Welcome to</p>
-        <p class="endpaper__title">the Mahal</p>
+        <p class="endpaper__title">Moti Restro</p>
         <p class="endpaper__text">Charcoal, patience and spice — recipes kept the slow way. Turn the pages, take your time, and call for us whenever you are ready.</p>
         <p class="endpaper__meta">Open daily · 11 AM – 11 PM</p>
       </div>
@@ -50,7 +50,7 @@ const insideCoverPage = () => `
 const contentsPage = (chapters, n) => `
   <div class="pg pg--soft" data-density="soft">
     <div class="pg__inner paper">${frame}
-      ${head('Moti Mahal', 'Contents')}
+      ${head('Moti Restro', 'Contents')}
       <div class="toc-wrap">
         <h3 class="paper__title">Contents</h3>
         <ol class="toc">
@@ -136,7 +136,7 @@ const detailPage = (it, c, no, n) => `
 const notesPage = (n) => `
   <div class="pg pg--soft" data-density="soft">
     <div class="pg__inner paper">${frame}
-      ${head('Moti Mahal', 'Notes')}
+      ${head('Moti Restro', 'Notes')}
       <div class="notes">
         <h3 class="paper__title">A few notes</h3>
         <ul class="notes__legend">
@@ -158,7 +158,7 @@ const insideBackPage = () => `
         <svg class="endpaper__star" aria-hidden="true"><use href="#i-star" /></svg>
         <p class="endpaper__kicker">Thank you for</p>
         <p class="endpaper__title">dining with us</p>
-        <p class="endpaper__text">Reserve your next evening at the Mahal, or call us for takeaway and delivery.</p>
+        <p class="endpaper__text">Reserve your next evening at Moti Restro, or call us for takeaway and delivery.</p>
         <div class="endpaper__links">
           <a class="endpaper__btn" href="/visit#reserve">Reserve a table</a>
           <a class="endpaper__btn endpaper__btn--ghost" href="tel:+918796277703">Call 087962 77703</a>
@@ -173,7 +173,7 @@ const backCoverPage = () => `
       <span class="cover__frame" aria-hidden="true"></span>
       <div class="cover__content">
         <svg class="cover__mark cover__mark--sm" aria-hidden="true"><use href="#i-mark" /></svg>
-        <p class="cover__brand foil">Moti Mahal</p>
+        <p class="cover__brand foil">Moti Restro</p>
         <p class="cover__sub">Sun Twilight, Sector 27<br />Jaypee Greens, Greater Noida<br />087962 77703</p>
       </div>
     </div>
@@ -195,8 +195,8 @@ export function buildBook() {
   const add = (markup, m) => { html.push(markup); meta.push(m); };
 
   add(coverPage(), { label: 'The Menu', chapter: 'Cover' });
-  add(insideCoverPage(), { label: 'Welcome', chapter: 'Moti Mahal' });
-  add(contentsPage(chapters, 2), { label: 'Contents', chapter: 'Moti Mahal' });
+  add(insideCoverPage(), { label: 'Welcome', chapter: 'Moti Restro' });
+  add(contentsPage(chapters, 2), { label: 'Contents', chapter: 'Moti Restro' });
   let no = 0;
   chapters.forEach((c) => {
     const chapter = `Chapter ${c.roman}`;
@@ -208,9 +208,9 @@ export function buildBook() {
       add(detailPage(it, c, no, html.length), { label: it.name, chapter: c.title, cat: c.id });
     });
   });
-  add(notesPage(html.length), { label: 'Notes', chapter: 'Moti Mahal' });
-  add(insideBackPage(), { label: 'Thank you', chapter: 'Moti Mahal' });
-  add(backCoverPage(), { label: 'Moti Mahal', chapter: 'Back cover' });
+  add(notesPage(html.length), { label: 'Notes', chapter: 'Moti Restro' });
+  add(insideBackPage(), { label: 'Thank you', chapter: 'Moti Restro' });
+  add(backCoverPage(), { label: 'Moti Restro', chapter: 'Back cover' });
 
   return { html: html.join(''), meta, chapters };
 }
@@ -285,7 +285,7 @@ export function createBook(section, meta, chapters, { onChapter } = {}) {
     countEl.textContent = `${shown} / ${total}`;
     prev.disabled = index <= 0;
     next.disabled = index >= total - 1;
-    gsap.to(progress, { scaleX: Math.max(0.02, index / (total - 1)), duration: 0.8, ease: 'mahal' });
+    gsap.to(progress, { scaleX: Math.max(0.02, index / (total - 1)), duration: 0.8, ease: 'restro' });
     onChapter?.(m.cat || null);
   };
 

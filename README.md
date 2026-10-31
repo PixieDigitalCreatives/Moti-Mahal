@@ -1,6 +1,6 @@
-# Moti Mahal — Jaypee Greens (premium redesign)
+# Moti Restro — Jaypee Greens (premium redesign)
 
-Animated website concept for Moti Mahal, Sun Twilight, Jaypee Greens, Greater Noida.
+Animated website concept for Moti Restro, Sun Twilight, Jaypee Greens, Greater Noida.
 
 - **Stack:** React 19 + Vite 8, React Router 7, SCSS (Sass modules), GSAP 3.15 (ScrollTrigger, SplitText, DrawSVG, Flip) via `@gsap/react`, Lenis smooth scroll, StPageFlip for the menu book.
 - **Figma:** https://www.figma.com/design/780Z6yiDs2ysx8fBqBIiHu — colour and type tokens, components, the 4-frame gate preloader storyboard and the top of the Home page.
@@ -21,7 +21,7 @@ It is a single-page app with client-side routes (`/`, `/menu`, `/story`, `/galle
 
 | Route | Highlights |
 | --- | --- |
-| `/` | Mahal-gate preloader, hero, scroll-scrubbed manifesto with image pills, pinned horizontal signature dishes, bento grid, arch window that grows to full screen, velocity-reactive marquee, sticky legacy split, parallax CTA |
+| `/` | gate preloader, hero, scroll-scrubbed manifesto with image pills, pinned horizontal signature dishes, bento grid, arch window that grows to full screen, velocity-reactive marquee, sticky legacy split, parallax CTA |
 | `/menu` | **Book view (default):** leather-bound book that opens from a closed cover, real page curl, drag or swipe a page, arrows and ← → keys, contents and chapter pages that jump to a dish, one spread per dish (photo page with a 3D tilt on hover, detail page with description, composition, spice level, pairing and price). **List view:** classic sticky-category list. Toggle in the category bar; `?view=list` opens the list directly |
 | `/story` | Scrubbed intro, sticky outlined chapter titles, counters, sideways image ribbon |
 | `/gallery` | Filterable grid (GSAP Flip), parallax tiles, lightbox with keyboard support, expanding mood panels |
@@ -55,7 +55,7 @@ Scroll animations are declared in markup with data attributes (`data-split`, `da
 ## Before going live: confirm with the client
 
 1. **Prices:** only Butter Chicken ₹380, Dal Makhani ₹280, Tandoori Roti ₹40, Mutton Rogan Josh ₹450, Chicken Biryani ₹320 and Paneer Tikka Masala ₹310 come from the current site. Every other dish, price, composition, spice level and pairing in `src/data/menu.js` is placeholder copy.
-2. **Heritage copy:** the 1947 / Daryaganj story describes the original Moti Mahal. Check how this outlet is affiliated before publishing it.
+2. **Heritage copy:** the 1947 / Daryaganj story describes the original Moti Restro. Check how this outlet is affiliated before publishing it.
 3. **Photos** are Unsplash stock (free licence) used for the pitch. Replace them with the restaurant's own food and interior photography.
 4. **WhatsApp:** the reservation form sends requests to +91 87962 77703. Confirm that number takes WhatsApp, or connect the form to email or a booking system.
 5. **Social links:** the Instagram and Facebook links are `#` placeholders.

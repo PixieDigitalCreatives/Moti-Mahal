@@ -10,7 +10,7 @@ function heroImageReady() {
 }
 
 /**
- * The Mahal gate intro:
+ * The gate intro:
  *   1. gold line-art draws itself while assets load (000 -> 100)
  *   2. the facade, sky and studded doors illuminate
  *   3. the doors swing open on a pool of lamplight
@@ -48,7 +48,7 @@ export function runPreloader({ onReveal } = {}) {
       if (done) return;
       done = true;
       timelines.forEach((t) => t.kill());
-      try { sessionStorage.setItem('mm-entered', '1'); } catch (_) {}
+      try { sessionStorage.setItem('mr-entered', '1'); } catch (_) {}
       html.classList.remove('is-preloading');
       root.remove();
       resolve();

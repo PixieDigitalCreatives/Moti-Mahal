@@ -9,13 +9,13 @@ const NAMES = {
   '/gallery.html': 'Gallery',
   '/visit.html': 'Visit & Reserve',
 };
-const titleFor = (path) => NAMES[path] || 'Moti Mahal';
+const titleFor = (path) => NAMES[path] || 'Moti Restro';
 
 const curtain = () => document.querySelector('[data-curtain]');
 
 function setTitle(path) {
   const t = document.querySelector('[data-curtain-title]');
-  if (t) t.innerHTML = `<span><small>Moti Mahal</small>${titleFor(path)}</span>`;
+  if (t) t.innerHTML = `<span><small>Moti Restro</small>${titleFor(path)}</span>`;
 }
 
 export function initTransitions() {

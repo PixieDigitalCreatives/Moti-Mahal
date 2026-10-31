@@ -38,8 +38,8 @@ export default function Home() {
 
   return (
     <div ref={page}>
-      <title>Moti Mahal Jaypee Greens — Tandoori &amp; Mughlai Restaurant, Greater Noida</title>
-      <meta name="description" content="Moti Mahal, Jaypee Greens: charcoal tandoor kebabs, butter chicken, dal makhani and dum biryani in Sun Twilight, Sector 27, Greater Noida. Open daily 11 AM – 11 PM." />
+      <title>Moti Restro Jaypee Greens — Tandoori &amp; Mughlai Restaurant, Greater Noida</title>
+      <meta name="description" content="Moti Restro, Jaypee Greens: charcoal tandoor kebabs, butter chicken, dal makhani and dum biryani in Sun Twilight, Sector 27, Greater Noida. Open daily 11 AM – 11 PM." />
       <main id="main">
         {/* HERO */}
         <section className="hero" data-hero>
@@ -75,7 +75,7 @@ export default function Home() {
             <span className="pill" data-pill><img src="/images/dal-makhani.webp" alt="" loading="lazy" /></span>{' '}
             through the night, and every plate served like family.
           </p>
-          <p className="manifesto__sign" data-fade>— The Moti Mahal Kitchen</p>
+          <p className="manifesto__sign" data-fade>— The Moti Restro Kitchen</p>
         </section>
 
         {/* SIGNATURES: pinned horizontal scroll */}
@@ -119,7 +119,7 @@ export default function Home() {
         {/* EXPERIENCE BENTO */}
         <section className="section container">
           <div className="bento-head">
-            <h2 className="h2" data-split>More than a meal —<br /><em>an evening at the Mahal</em></h2>
+            <h2 className="h2" data-split>More than a meal —<br /><em>an evening at Moti Restro</em></h2>
           </div>
           <div className="bento" data-stagger>
             <article className="bento__card bento__card--xl" data-cursor-label="Fire">
@@ -156,7 +156,7 @@ export default function Home() {
               <div className="arch"><img src="/images/dining-room.webp" alt="Elegant dining room laid for service" loading="lazy" data-ar-img /></div>
               <div className="arch-reveal__pearls" data-ar-pearls />
             </div>
-            <h2 className="arch-reveal__word arch-reveal__word--r" data-ar-right>the Mahal</h2>
+            <h2 className="arch-reveal__word arch-reveal__word--r" data-ar-right>Moti Restro</h2>
             <p className="arch-reveal__cap" data-ar-cap>Warm brass, soft light and tables made for long conversations — family dinners, celebrations and everything in between.</p>
             <div className="arch-reveal__end" data-ar-end>
               <p className="label">Family dinners · Celebrations · Corporate lunches</p>
@@ -189,7 +189,7 @@ export default function Home() {
           <div className="legacy__text">
             <p className="label">Our story</p>
             <h2 className="h2" data-split>A legacy written<br /><em>in fire</em></h2>
-            <p className="lead muted" data-fade>The Moti Mahal name has stood for the clay tandoor since 1947, when a kitchen in Old Delhi’s Daryaganj changed the way India ate. Our Jaypee Greens home carries those recipes forward — the same marinades, the same patience, the same fire.</p>
+            <p className="lead muted" data-fade>The Moti Restro name has stood for the clay tandoor since 1947, when a kitchen in Old Delhi’s Daryaganj changed the way India ate. Our Jaypee Greens home carries those recipes forward — the same marinades, the same patience, the same fire.</p>
             <Button href="/story" variant="outline" data-fade>Read our story</Button>
           </div>
           <div className="legacy__media">

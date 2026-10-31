@@ -6,7 +6,7 @@ import { ROUTE_TITLES } from '../data/site.js';
 
 /**
  * Orchestrates how pages appear:
- *   - first visit: the Mahal-gate preloader, then the hero plays
+ *   - first visit: the gate preloader, then the hero plays
  *   - internal links: an arch-topped curtain rises, the route changes underneath, the curtain lifts
  *   - `revealKey` increments whenever the current page's hero should animate in
  */
@@ -15,7 +15,7 @@ export const useExperience = () => useContext(ExperienceContext);
 
 function setCurtainTitle(el, path) {
   const t = el.querySelector('[data-curtain-title]');
-  if (t) t.innerHTML = `<span><small>Moti Mahal</small>${ROUTE_TITLES[path] || 'Moti Mahal'}</span>`;
+  if (t) t.innerHTML = `<span><small>Moti Restro</small>${ROUTE_TITLES[path] || 'Moti Restro'}</span>`;
 }
 
 export function ExperienceProvider({ children }) {

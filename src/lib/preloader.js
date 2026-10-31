@@ -13,7 +13,7 @@ function heroImageReady() {
 }
 
 /**
- * The Mahal gate intro:
+ * The gate intro:
  *   1. gold line-art draws itself while fonts and the hero image load (000 -> 100)
  *   2. the facade, sky and studded doors illuminate
  *   3. the doors swing open on a pool of lamplight

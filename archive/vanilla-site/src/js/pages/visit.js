@@ -51,7 +51,7 @@ function reservationForm() {
     const d = Object.fromEntries(new FormData(form));
     const pretty = new Date(`${d.date}T00:00`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
     const msg = [
-      'Hello Moti Mahal, I would like to reserve a table.',
+      'Hello Moti Restro, I would like to reserve a table.',
       `Name: ${d.name}`, `Phone: ${d.phone}`, `Date: ${pretty}`, `Time: ${d.time}`, `Guests: ${d.guests}`,
       d.occasion && d.occasion !== 'None' ? `Occasion: ${d.occasion}` : '',
       d.notes ? `Requests: ${d.notes}` : '',
@@ -83,7 +83,7 @@ function faq() {
     q.addEventListener('click', () => {
       const open = q.getAttribute('aria-expanded') === 'true';
       q.setAttribute('aria-expanded', String(!open));
-      gsap.to(a, { height: open ? 0 : 'auto', duration: 0.7, ease: 'mahal', onComplete: () => ScrollTrigger.refresh() });
+      gsap.to(a, { height: open ? 0 : 'auto', duration: 0.7, ease: 'restro', onComplete: () => ScrollTrigger.refresh() });
     });
   });
 }

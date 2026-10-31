@@ -4,7 +4,7 @@ import { runPreloader } from '../lib/preloader.js';
 import { startScroll, stopScroll } from '../lib/smooth.js';
 import { useExperience } from '../context/Experience.jsx';
 
-/** First-visit intro: the Mahal gate draws itself, opens, and the camera flies through the arch. */
+/** First-visit intro: the gate draws itself, opens, and the camera flies through the arch. */
 export default function Preloader() {
   const { phase, setPhase, reveal } = useExperience();
   const root = useRef(null);
@@ -15,7 +15,7 @@ export default function Preloader() {
     return runPreloader(root.current, {
       onReveal: reveal,
       onDone: () => {
-        try { sessionStorage.setItem('mm-entered', '1'); } catch (_) { /* private mode */ }
+        try { sessionStorage.setItem('mr-entered', '1'); } catch (_) { /* private mode */ }
         document.documentElement.classList.remove('is-preloading');
         startScroll();
         setPhase('ready');
@@ -30,7 +30,7 @@ export default function Preloader() {
       <div className="preloader__backdrop" data-preloader-backdrop />
       <div className="preloader__zoom" data-preloader-zoom dangerouslySetInnerHTML={{ __html: gateSvg }} />
       <div className="preloader__ui" data-preloader-ui>
-        <div className="preloader__brand"><span>Moti Mahal</span><span>Jaypee Greens · Greater Noida</span></div>
+        <div className="preloader__brand"><span>Moti Restro</span><span>Jaypee Greens · Greater Noida</span></div>
         <div className="preloader__count" data-preloader-count>000</div>
         <div className="preloader__bar"><i data-preloader-bar /></div>
       </div>

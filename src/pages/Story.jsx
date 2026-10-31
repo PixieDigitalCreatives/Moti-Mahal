@@ -12,14 +12,14 @@ const CHAPTERS = [
     img: 'arches-agra', alt: 'Cusped Mughal arches in sunlight',
     label: 'Chapter one · The first fire',
     title: 'A tandoor in Old Delhi',
-    text: 'The Moti Mahal story began in 1947 in Daryaganj, Old Delhi, around a clay tandoor that would change how India ate. Chicken marinated in yoghurt and spice met the searing heat of charcoal — and tandoori cooking found its home at the restaurant table.',
+    text: 'The Moti Restro story began in 1947 in Daryaganj, Old Delhi, around a clay tandoor that would change how India ate. Chicken marinated in yoghurt and spice met the searing heat of charcoal — and tandoori cooking found its home at the restaurant table.',
   },
   {
     year: 'Craft',
     img: 'butter-chicken-smoke', alt: 'Smoky butter chicken in a metal bowl',
     label: 'Chapter two · The classics',
     title: 'Butter, tomato and patience',
-    text: 'From that fire came the dishes the Moti Mahal name is known for: butter chicken, rich with tomato and white butter, and dal makhani, black lentils left to simmer through the night. We still cook them the long way — there is no shortcut to that depth.',
+    text: 'From that fire came the dishes the Moti Restro name is known for: butter chicken, rich with tomato and white butter, and dal makhani, black lentils left to simmer through the night. We still cook them the long way — there is no shortcut to that depth.',
   },
   {
     year: 'Today',
@@ -59,8 +59,8 @@ export default function Story() {
 
   return (
     <div ref={page}>
-      <title>Our Story — Moti Mahal Jaypee Greens | A Legacy Written in Fire</title>
-      <meta name="description" content="The Moti Mahal legacy of the clay tandoor, butter chicken and dal makhani — now in Jaypee Greens, Greater Noida." />
+      <title>Our Story — Moti Restro Jaypee Greens | A Legacy Written in Fire</title>
+      <meta name="description" content="The Moti Restro legacy of the clay tandoor, butter chicken and dal makhani — now in Jaypee Greens, Greater Noida." />
       <main id="main">
         <PageHero image="/images/arch-corridor.webp" alt="Ornate Mughal archway leading through a dark hall" crumb="Our Story" title={<>A legacy<br /><em>written in fire</em></>}>
           <p className="lead">Some kitchens follow trends. Ours follows a flame that has burned since 1947.</p>
@@ -74,7 +74,7 @@ export default function Story() {
 
         <section className="container chapters" style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="chapters__sticky" aria-hidden="true">
-            <p className="label">The Moti Mahal story</p>
+            <p className="label">The Moti Restro story</p>
             <div className="chapters__years">
               {CHAPTERS.map((c, i) => (
                 <span className={`chapters__year${i === chapter ? ' is-active' : ''}`} key={c.year}>{c.year}</span>
@@ -106,14 +106,14 @@ export default function Story() {
               <div className="craft__item"><span className="craft__num"><span data-count="480">480</span>°</span><p className="label">Tandoor heat</p><p>Charcoal-fired clay ovens, hot enough to char and seal in seconds.</p></div>
               <div className="craft__item"><span className="craft__num">Overnight</span><p className="label">Dal makhani</p><p>Black lentils simmered on low coals until they turn to velvet.</p></div>
               <div className="craft__item"><span className="craft__num">Daily</span><p className="label">Hand-ground</p><p>Masalas roasted and ground in our kitchen every morning.</p></div>
-              <div className="craft__item"><span className="craft__num" data-count="1947">1947</span><p className="label">The legacy</p><p>The year the Moti Mahal tandoor story began in Old Delhi.</p></div>
+              <div className="craft__item"><span className="craft__num" data-count="1947">1947</span><p className="label">The legacy</p><p>The year the Moti Restro tandoor story began in Old Delhi.</p></div>
             </div>
           </div>
         </section>
 
         <section className="section" style={{ overflow: 'hidden' }}>
           <div className="container sec-head">
-            <h2 className="h2" data-split>Inside<br /><em>the Mahal</em></h2>
+            <h2 className="h2" data-split>Inside<br /><em>Moti Restro</em></h2>
             <Button href="/gallery" variant="link">Open the gallery</Button>
           </div>
           <div className="ribbon" data-ribbon>

@@ -1,7 +1,7 @@
 export const PHONE_DISPLAY = '087962 77703';
 export const PHONE_TEL = 'tel:+918796277703';
 export const WHATSAPP = '918796277703';
-export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Moti+Mahal+Sun+Twilight+Jaypee+Greens+Greater+Noida';
+export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Moti+Restro+Sun+Twilight+Jaypee+Greens+Greater+Noida';
 
 export const NAV_LINKS = [
   { to: '/menu', label: 'Menu' },

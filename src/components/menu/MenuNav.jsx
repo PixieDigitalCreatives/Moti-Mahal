@@ -15,14 +15,14 @@ export default function MenuNav({ active, view, onCategory, onView }) {
     if (!link) return;
     gsap.to(pillRef.current, {
       x: link.offsetLeft, y: link.offsetTop, width: link.offsetWidth, height: link.offsetHeight,
-      duration: first.current ? 0 : 0.6, ease: 'mahal',
+      duration: first.current ? 0 : 0.6, ease: 'restro',
     });
     listRef.current.scrollTo({ left: link.offsetLeft - 40, behavior: first.current ? 'auto' : 'smooth' });
   }, [active]);
 
   useLayoutEffect(() => {
     const btn = toggleRef.current.querySelector(`[data-view="${view}"]`);
-    gsap.to(thumbRef.current, { x: btn.offsetLeft - 4, width: btn.offsetWidth, duration: first.current ? 0 : 0.6, ease: 'mahal' });
+    gsap.to(thumbRef.current, { x: btn.offsetLeft - 4, width: btn.offsetWidth, duration: first.current ? 0 : 0.6, ease: 'restro' });
     first.current = false;
   }, [view]);
 
